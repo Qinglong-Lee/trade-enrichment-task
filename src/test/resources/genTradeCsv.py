@@ -1,5 +1,6 @@
 # execute cmd first: pip install pandas
 import pandas as pd
+
 print("Processing...")
 
 df = pd.read_csv("trade.csv"

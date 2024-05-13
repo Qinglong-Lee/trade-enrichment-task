@@ -6,6 +6,8 @@
 - install Pandas berfore run the script
   - pip install pandas
 - apply the loop count of yourself in script
+- cmd
+  - python genProductCsv.py
 #### IDE
 - Run as application on `TradeEnrichmentServiceApplication.java`.
 #### jar

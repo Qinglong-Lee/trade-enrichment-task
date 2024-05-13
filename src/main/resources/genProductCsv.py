@@ -6,7 +6,6 @@ print("Processing...")
 df = pd.read_csv("product.csv"
                  , names = ["product_id", "product_name"], skiprows = [0])
 
-
 df1 = df.copy()
 # replace your count here
 for x in range(0, 500):
