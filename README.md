@@ -11,7 +11,9 @@
 #### IDE
 - Run as application on `TradeEnrichmentServiceApplication.java`.
 #### jar
-- jar trade-enrichment-service-0.0.1-SNAPSHOT.jar
+```
+java -jar trade-enrichment-service-0.0.1-SNAPSHOT.jar --enrich.product.file={your_dir}/trade-enrichment-task/src/main/resources/largeSetProducts.csv
+```
 ### How to use the API.
 #### postman
 1. Import src/test/resources/tradeEnrich.postman_collection.json into Postman
