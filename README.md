@@ -21,10 +21,7 @@ java -jar trade-enrichment-service-0.0.1-SNAPSHOT.jar --enrich.product.file={you
 3. You can save response by the button [save response to file] on the right of the response panel
 #### CURL
 ```
-curl --location 'localhost:8080/api/v1/enrich' \
-  --header 'Content-Type: text/csv' \
-  --header 'Accept: text/csv' \
-  --form 'file=@"/src/test/resources/millionsTrades.csv"'
+curl --form "file=@{your_dir}/trade-enrichment-task/src/test/resources/millionsTrades-20M.csv" --header "Content-Type: multipart/form-data; boundary=--------------------------189228108985109333617412" --location "http://localhost:8080/api/v1/enrich"
 ``` 
 ### Performace Test Result
 - Condition:

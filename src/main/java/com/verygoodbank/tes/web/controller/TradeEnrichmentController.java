@@ -25,7 +25,7 @@ public class TradeEnrichmentController {
     @Autowired
     TradeEnrichmentService tradeEnrichmentService;
 
-    @PostMapping(value = "/enrich")
+    @PostMapping(value = "/enrich", consumes = { "multipart/form-data" })
     public ResponseEntity<byte[]> tradeEnrichment(@RequestPart("file") MultipartFile file) throws IOException {
         long startTimestamp = System.currentTimeMillis();
 //        parse file to BufferedReader
