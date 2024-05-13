@@ -8,6 +8,8 @@
 - apply the loop count of yourself in script
 - cmd
   - python genProductCsv.py
+- note
+  - you can execute the script several times for less time cost
 #### IDE
 - Run as application on `TradeEnrichmentServiceApplication.java`.
 #### jar
