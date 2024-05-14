@@ -45,7 +45,9 @@ curl --form "file=@{your_dir}/trade-enrichment-task/src/test/resources/millionsT
 - Stress test for different scenarios could be applied for more appropriate configuration of Thread pool.
 ### More to discuss
 - The solution is just for standalone, for more complicated scenario such as distributed deployment or high concurrency, there should be more detail to take into consideration.
-- http is not an appropriate way to transfer large sets of file data. Instead, MQ could be more efficient.
+- CompletableFuture may be more efficient, however, it would lose the sequentiality of data.
+- Http is not an appropriate way to transfer large sets of file data. Instead, MQ could be more efficient.
+- If the size of trades.csv is G level, apply stream transfer to both client and server.
 - Sync response would block the client when the server is overloaded. Instead, the server can return a processing status first and then save the processed data to local, as well as manage a status. Then user can check the status through specific API, and get the processed data through another API.
 - If the Server environment has the ability to handle high level load, Servlet 3.0 async server can be applied, which would handle the request to web server thread and return the tomcat thread for receive more requests. 
 - Scalability would always be an issue for a robust system. Configuration Center like Nacos could be applied and Builder Design Pattern could also be applied to the product.csv loader and process logic of trade.csv.
